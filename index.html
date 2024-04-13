@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css
+" />
+  <link rel="stylesheet" href="Css/style.css" />
+  <title>Quiz App</title>
+</head>
+
+<body>
+  <main class="position-relative d-flex justify-content-center text-white py-5" id="particles-js">
+    <section class="show position-absolute w-75 bg-gradient rounded-5 py-4" id="setting">
+      <div class="header border-2 border-bottom">
+        <h2 class="text-center pb-3">Setting Your Quiz</h2>
+      </div>
+      <div class="w-75 mx-auto py-3">
+        <div class="cate pb-4">
+          <h3 class="py-2">Category</h3>
+          <select class="form-select" id="categories" aria-label="Disabled select example">
+            <option value="9">General Knowledge</option>
+            <option value="21">Sports</option>
+            <option value="18">Science:Computer</option>
+            <option value="23">History</option>
+            <option value="27">Animals</option>
+            <option value="15">Entertainment:Video Games</option>
+            <option value="11">Entertainment:Film</option>
+          </select>
+        </div>
+        <div class="diffeculty py-4">
+          <h3 class="pb-3">diffeculty</h3>
+          <ul class="list-unstyled">
+            <li class="pb-3">
+              <div class="pretty p-icon p-round">
+                <input type="radio" name="difficulty" value="easy" checked />
+                <div class="state p-info">
+                  <i class="icon mdi mdi-check"></i>
+                  <label>Easy</label>
+                </div>
+              </div>
+            </li>
+            <li class="pb-3">
+              <div class="pretty p-icon p-round">
+                <input type="radio" name="difficulty" value="medium" />
+                <div class="state p-info">
+                  <i class="icon mdi mdi-check"></i>
+                  <label>Medium</label>
+                </div>
+              </div>
+            </li>
+            <li class="pb-3">
+              <div class="pretty p-icon p-round">
+                <input type="radio" name="difficulty" value="hard" />
+                <div class="state p-info">
+                  <i class="icon mdi mdi-check"></i>
+                  <label>Hard</label>
+                </div>
+              </div>
+        </div>
+        </li>
+        </ul>
+        <div class="num_questions">
+          <p class="text-danger text-uppercase" id="alert_num">Enter Number Of Questions</p>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="amount" value="1" />
+            <label for="floatingInput" class="text-capitalize pt-4">number of questions</label>
+          </div>
+        </div>
+        <div class="begain py-3 d-flex justify-content-end">
+          <button class="btn btn-secondary" id="start">START</button>
+        </div>
+      </div>
+    </section>
+    <section class="position-absolute w-75 bg-gradient rounded-5 py-4" id="questions">
+      <header class="py-3 border-2 border-bottom text-center">
+        <h2>Quiz</h2>
+        <div class="col-3 ms-auto">
+        <p class="badge text-bg-warning rounded-pill p-3 me-sm-5 me-xl-0"><span class="me-1" id="from"></span>Of<span class="ms-1" id="to"></span> Questions</p>
+      </div>
+      </header>
+      <div class="questions py-5 w-75 mx-auto">
+        <div class="single-ques pb-3 d-flex justify-content-between align-items-center">
+          <p class="h3 pb-3">Q <span id="numOfQuestions"></span>: <span id="shown-ques"></span></p>
+          <div class="answer">
+          <p class="text-danger h3" id="incorrect">Incorrect</p>
+          <p class="text-success h3" id="correct">Correct</p>
+          </div>
+        </div>
+        <ul class="list-unstyled" id="answers">
+            
+        </ul>
+      </div>
+      <div class="d-flex bottom_quiz justify-content-end align-items-center" id="next">
+        <p class="text-danger me-5" id="answer-alert">You Must Choose Answer</p>
+        <button class="btn rounded-5 px-3 py-2 btn-secondary me-5" id="nextQuestion">NEXT</button>
+      </div>
+    </section>
+    <section class="position-absolute p-4 w-75 rounded-3 bg-gradient m-5" id="finalScore">
+      <header class="py-3 border-2 border-bottom text-center">
+        <h2>Finish</h2>
+      </header>
+      <div class="w-75 mx-auto">
+        <div class="aka-score text-center py-5">
+          <h3 class="pb-3 h1">Score</h3>
+          <span class="h1" id="score"></span>
+        </div>
+        <div class="start py-3 d-flex justify-content-end">
+          <button class="btn btn-secondary" id="end">Try Again</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./Js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./Js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./Js/main.js"></script>
+</body>
+
+</html>
